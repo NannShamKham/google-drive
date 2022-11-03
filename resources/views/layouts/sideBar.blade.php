@@ -44,7 +44,9 @@
                                         <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
                                     </svg>
                                 </div>
-                                <p class="mb-0 ms-3">file Upload</p>
+
+                                <p class="mb-0 ms-3" id="uploadBtn">file Upload</p>
+                                <input type="file" name="file[]" id="file" hidden>
                             </div>
                         </a>
                         <a href="" class="text-secondary fw-bold text-decoration-none">
@@ -144,7 +146,16 @@
             <i class="bi bi-trash3 me-3 fs-5 "></i>
             <span>Bin</span>
         </a>
-
-
     </div>
 </div>
+
+@push('script')
+    <script type="module">
+        let uploadBtn = document.getElementById("uploadBtn");
+        let file = document.getElementById('file');
+        uploadBtn.addEventListener("click",function (){
+            file.click();
+            console.log("hello")
+        })
+    </script>
+@endpush
