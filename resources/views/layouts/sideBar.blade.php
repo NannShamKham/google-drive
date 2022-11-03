@@ -1,9 +1,12 @@
 <div class="position-fixed ms-4">
-    <div class="list-group mb-3">
-        <a href="{{route('store.create')}}"
+    <div class="list-group mb-3 position-relative ">
+        <a href="#create"
+           data-bs-toggle="collapse"
+           aria-controls="#create"
            class=" text-center list-group-item rounded-pill bg-white shadow-sm py-1"
-           style="width: 190px"
+           style="width: 150px"
         >
+
         <span class="me-2" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 36 36">
                 <path fill="#34A853" d="M16 16v14h4V20z">
@@ -14,8 +17,50 @@
                 <path fill="none" d="M0 0h36v36H0z"></path>
             </svg>
         </span>
-            <span class="fs-6">Create Contact</span>
+            <span class="fs-6">New</span>
         </a>
+        <div style="z-index: 2001;">
+            <div class="collapse collapse-vertical position-fixed" id="create">
+                <div class="card " >
+                    <div class="card-body px-5 ">
+                        <a href="" class="text-secondary fw-bold text-decoration-none">
+                            <div class="d-flex mb-3">
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                        <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                                        <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                                    </svg>
+                                </div>
+                                <p class="mb-0 ms-3">New Folder</p>
+                            </div>
+                        </a>
+                        <hr>
+                        <a href="" class="text-secondary fw-bold text-decoration-none">
+                            <div class="d-flex mb-3">
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                        <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                                        <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                                    </svg>
+                                </div>
+                                <p class="mb-0 ms-3">file Upload</p>
+                            </div>
+                        </a>
+                        <a href="" class="text-secondary fw-bold text-decoration-none">
+                            <div class="d-flex mb-3">
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                        <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                                        <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                                    </svg>
+                                </div>
+                                <p class="mb-0 ms-3">New Folder</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="list-group border-bottom border-1 pb-3  ">

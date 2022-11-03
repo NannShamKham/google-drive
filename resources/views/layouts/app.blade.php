@@ -16,7 +16,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-white">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -74,7 +74,7 @@
 
         <main class="py-3">
             @auth
-
+                <div class="row my-3"></div>
                 <div class="row g-5">
                     <div class="col-lg-2  vh-100">
                         @include('layouts.sideBar')
