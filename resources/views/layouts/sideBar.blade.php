@@ -1,5 +1,6 @@
 <div class="position-fixed ms-4">
     <div class="list-group mb-3 position-relative ">
+{{--        create--}}
         <a href="#create"
            data-bs-toggle="collapse"
            aria-controls="#create"
@@ -22,7 +23,7 @@
         <div style="z-index: 2001;">
             <div class="collapse collapse-vertical position-fixed" id="create">
                 <div class="card " >
-                    <div class="card-body px-5 ">
+                    <div class="card-body px-4 ">
                         <a href="" class="text-secondary fw-bold text-decoration-none">
                             <div class="d-flex mb-3">
                                 <div class="">
@@ -54,7 +55,7 @@
                                         <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
                                     </svg>
                                 </div>
-                                <p class="mb-0 ms-3">New Folder</p>
+                                <p class="mb-0 ms-3">Folder Upload</p>
                             </div>
                         </a>
                     </div>
