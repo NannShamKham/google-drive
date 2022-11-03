@@ -22,3 +22,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/store',StoreController::class);
+
+Route::resource('/file-upload',\App\Http\Controllers\FileUploadController::class);
