@@ -1,6 +1,6 @@
 <div class="position-fixed ms-4">
     <div class="list-group mb-3 position-relative ">
-{{--        create--}}
+<!-- create start  -->
         <a href="#create"
            data-bs-toggle="collapse"
            aria-controls="#create"
@@ -66,88 +66,108 @@
             </div>
         </div>
     </div>
+<!-- create end  -->
+<!-- sidebar list start  -->
+    <ul class="list-group   ">
+{{--        mydrive start --}}
+      <li class="list-group-item border-0 ">
+          <a  class=" py-1 mb-1 border-0 text-decoration-none text-secondary fw-semibold justify-content-between d-flex align-items-center"  data-bs-toggle="collapse"
+              aria-controls="#myDrive" href="#myDrive">
+              <div class="d-flex">
+                  <div class="me-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hdd-fill" viewBox="0 0 16 16">
+                          <path d="M0 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-1zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM.91 7.204A2.993 2.993 0 0 1 2 7h12c.384 0 .752.072 1.09.204l-1.867-3.422A1.5 1.5 0 0 0 11.906 3H4.094a1.5 1.5 0 0 0-1.317.782L.91 7.204z"/>
+                      </svg>
+                  </div>
+                  <span>My Drive</span>
+              </div>
+          </a>
+          <div >
+              <div class="collapse collapse-vertical " id="myDrive">
+                  <div class="card border-0" >
+                      <div class="card-body px-4 py-0 mt-2">
+                          <a href="" class="text-secondary fw-bold text-decoration-none">
+                              <div class="d-flex mb-3">
+                                  <div class="">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
+                                          <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+                                      </svg>
 
-    <div class="list-group border-bottom border-1 pb-3  ">
+                                  </div>
+                                  <p class="mb-0 ms-3">New Folder</p>
+                              </div>
+                          </a>
 
-        <a href="{{route('store.index')}}" class="d-flex  mb-1 fs-6 border-0 list-group-item  d-flex justify-content-between align-items-center">
-            <div class="">
-                <i class="bi bi-person fs-5 me-3"></i>
-                <span>Contacts</span>
-            </div>
-            <span>3</span>
-        </a>
-
-        <a href="{{route('store.index')}}" class=" fs-6 mb-1 border-0 list-group-item justify-content-between d-flex align-items-center">
-            <div class="">
-                <i class="bi bi-arrow-clockwise fs-5 me-3"></i>
-                <span>Frequently contacted</span>
-            </div>
-
-        </a>
-
-        <a href="{{route('store.index')}}" class=" py-1 mb-1 border-0 list-group-item justify-content-between d-flex align-items-center">
-            <div class="d-flex">
-                <div class=" me-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" class="NSy2Hd cdByRd RTiFqe undefined"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h4l3 3 3-3h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16h-4.83l-.59.59L12 20.17l-1.59-1.59-.58-.58H5V4h14v14zm-7-1l1.88-4.12L18 11l-4.12-1.88L12 5l-1.88 4.12L6 11l4.12 1.88z"></path></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </li>
+{{--        mydrive end --}}
+{{--        computers start --}}
+      <li class="list-group-item border-0 ">
+            <a  class=" py-1 mb-0 border-0 text-decoration-none text-secondary fw-semibold justify-content-between d-flex align-items-center"  data-bs-toggle="collapse"
+                aria-controls="#computers" href="#computers">
+                <div class="d-flex">
+                    <div class="me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                        </svg>
+                    </div>
+                    <span>Computers</span>
                 </div>
-                <span>Merge and fix</span>
-            </div>
-        </a>
-    </div>
+            </a>
+            <div >
+                <div class="collapse collapse-vertical " id="computers">
+                    <div class="card border-0" >
+                        <div class="card-body px-4 py-0 mt-2">
+                            <a href="" class="text-secondary fw-bold text-decoration-none">
+                                <div class="d-flex mb-3">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
+                                            <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+                                        </svg>
 
-    <div class="list-group  border-bottom border-1">
-        <div class="accordion" id="labels">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        labels
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="heading" data-bs-parent="#labels">
-                    <div class="accordion-body">
-                        <div class="d-flex ">
-                            <i class="bi bi-plus fs-5 me-3"></i>
-                            <p class="mb-0">Create Label</p>
+                                    </div>
+                                    <p class="mb-0 ms-3">New Folder</p>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </li>
+{{--        mydrive end --}}
+        <li class="list-group-item border-0 rounded-end">
+            <a href="#" class=" text-decoration-none text-secondary fw-semibold d-flex border-0">
+                <i class="bi bi-person-check me-3 fs-5"></i>
+                <span>Share With Me</span>
+            </a>
 
-    <div class="list-group  border-bottom border-1">
-        <button class="list-group-item d-flex border-0">
-            <i class="bi bi-cloud-arrow-up me-3 fs-5 "></i>
-            <span>Import</span>
-        </button>
-        <form action="#" method="post">
-            @csrf
-            <button class="list-group-item d-flex border-0">
-                <i class="bi bi-cloud-arrow-down me-3 fs-5 "></i>
-                <span>Export</span>
-            </button>
-        </form>
+        </li>
+        <li class="list-group-item border-0 rounded-end">
+            <a href="#" class=" text-decoration-none text-secondary fw-semibold d-flex border-0">
+                <i class="bi bi-clock me-3 fs-5"></i>
+                <span>Recent</span>
+            </a>
 
-        <form action="#" method="post">
-            @csrf
-            <button class="list-group-item d-flex border-0">
-                <i class="bi bi-printer me-3 fs-5 "></i>
-                <span>Print</span>
-            </button>
-        </form>
+        </li>
+        <li class="list-group-item border-0 rounded-end">
+            <a href="#" class=" text-decoration-none text-secondary fw-semibold d-flex border-0">
+                <i class="bi bi-star me-3 fs-5"></i>
+                <span>Starred</span>
+            </a>
 
-    </div>
+        </li>
+        <li class="list-group-item border-0 rounded-end">
+            <a href="{{route('store.index',['trash'=>true])}}" class=" text-decoration-none text-secondary fw-semibold d-flex border-0">
+                <i class="bi bi-trash3 me-3 fs-6 "></i>
+                <span>Bin</span>
+            </a>
+        </li>
+    </ul>
 
-    <div class="list-group  border-bottom border-1">
-        <button class="list-group-item d-flex border-0">
-            <i class="bi bi-file-arrow-down me-3 fs-5 "></i>
-            <span>Other Contacts</span>
-        </button>
-        <a href="{{route('store.index',['trash'=>true])}}" class="list-group-item d-flex border-0">
-            <i class="bi bi-trash3 me-3 fs-5 "></i>
-            <span>Bin</span>
-        </a>
-    </div>
 </div>
 
 @push('script')
