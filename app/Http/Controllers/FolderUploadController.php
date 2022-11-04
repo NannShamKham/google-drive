@@ -36,7 +36,7 @@ class FolderUploadController extends Controller
      */
     public function store(StoreFolderUploadRequest $request)
     {
-        //
+        return $request;
     }
 
     /**

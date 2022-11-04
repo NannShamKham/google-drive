@@ -36,7 +36,7 @@
                             </div>
                         </a>
                         <hr>
-                        <form action="{{route('file-upload.store')}}" method="post" id="fileUpload" href="" class="text-secondary fw-bold text-decoration-none" enctype="multipart/form-data">
+                        <form action="{{route('file-upload.store')}}" method="post" id="fileUpload" href="" class="text-secondary fw-bold text-decoration-none pointer" enctype="multipart/form-data">
                             @csrf
                             <div class="d-flex mb-3">
                                 <div class="">
@@ -50,7 +50,8 @@
                                 <input type="file" name="photos" id="file" hidden>
                             </div>
                         </form>
-                        <a class="text-secondary fw-bold text-decoration-none">
+                        <form action="{{route('folder-upload.store')}}" id="folderUploadForm" class="text-secondary fw-bold text-decoration-none pointer" method="post">
+                            @csrf
                             <div class="d-flex mb-3">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
@@ -58,9 +59,10 @@
                                         <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
                                     </svg>
                                 </div>
-                                <p class="mb-0 ms-3">Folder Upload</p>
+                                <p class="mb-0 ms-3" id="folderUpload">Folder Upload</p>
+                                <input type="file" name="folder[]"  id="folder" webkitdirectory mozdirectory hidden>
                             </div>
-                        </a>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -172,6 +174,7 @@
 
 @push('script')
     <script type="module">
+        // file upload
         let uploadBtn = document.getElementById("uploadBtn");
         let file = document.getElementById('file');
         let fileUpload = document.getElementById('fileUpload');
@@ -180,6 +183,21 @@
             file.click();
             file.addEventListener('change',function (){
                 fileUpload.submit();
+                console.log(this.files)
+            })
+
+            // console.log(file.files.length)
+        })
+
+        // folder upload
+        let folder = document.getElementById("folder");//input
+        let folderUpload = document.getElementById('folderUpload');//p
+        let folderUploadForm = document.getElementById('folderUploadForm');//form
+        folderUpload.addEventListener("click",function (){
+
+            folder.click();
+            folder.addEventListener('change',function (){
+                folderUploadForm.submit();
             })
 
             // console.log(file.files.length)
