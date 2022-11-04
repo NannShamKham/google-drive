@@ -46,6 +46,7 @@ class FileUploadController extends Controller
             $request->file('photos')->storeAs("public",$newName);
         }
         $FileUpload->save();
+        return redirect()->route('home');
     }
 
     /**
