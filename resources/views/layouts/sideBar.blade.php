@@ -36,7 +36,8 @@
                             </div>
                         </a>
                         <hr>
-                        <a href="" class="text-secondary fw-bold text-decoration-none">
+                        <form action="{{route('file-upload.store')}}" method="post" id="fileUpload" href="" class="text-secondary fw-bold text-decoration-none" enctype="multipart/form-data">
+                            @csrf
                             <div class="d-flex mb-3">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
@@ -46,10 +47,10 @@
                                 </div>
 
                                 <p class="mb-0 ms-3" id="uploadBtn">file Upload</p>
-                                <input type="file" name="file[]" id="file" hidden>
+                                <input type="file" name="photos" id="file" hidden>
                             </div>
-                        </a>
-                        <a href="" class="text-secondary fw-bold text-decoration-none">
+                        </form>
+                        <a class="text-secondary fw-bold text-decoration-none">
                             <div class="d-flex mb-3">
                                 <div class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
@@ -173,9 +174,15 @@
     <script type="module">
         let uploadBtn = document.getElementById("uploadBtn");
         let file = document.getElementById('file');
+        let fileUpload = document.getElementById('fileUpload');
         uploadBtn.addEventListener("click",function (){
+
             file.click();
-            console.log("hello")
+            file.addEventListener('change',function (){
+                fileUpload.submit();
+            })
+
+            // console.log(file.files.length)
         })
     </script>
 @endpush
