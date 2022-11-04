@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('file_uploads', function (Blueprint $table) {
+        Schema::create('folders', function (Blueprint $table) {
             $table->id();
-            $table->string('StorageFileName');
-            $table->string('UiDbFileName');
-            $table->string('extension');
-//            $table->foreignId('folder_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('file_uploads');
+        Schema::dropIfExists('folders');
     }
 };
