@@ -60,7 +60,8 @@
                                     </svg>
                                 </div>
                                 <p class="mb-0 ms-3" id="folderUpload">Folder Upload</p>
-                                <input type="file" name="folder[]"  id="folder" webkitdirectory mozdirectory hidden>
+                                <input type="file" name="folder[]"  id="folder" directory webkitdirectory  hidden>
+                                <input type="text" name="origin" id="folderOriginal" hidden>
                             </div>
                         </form>
                     </div>
@@ -193,11 +194,14 @@
         let folder = document.getElementById("folder");//input
         let folderUpload = document.getElementById('folderUpload');//p
         let folderUploadForm = document.getElementById('folderUploadForm');//form
+        let folderOriginal = document.getElementById('folderOriginal');
         folderUpload.addEventListener("click",function (){
 
             folder.click();
-            folder.addEventListener('change',function (){
-                folderUploadForm.submit();
+            folder.addEventListener('change',function (e){
+                console.log(e.target.files[0].webkitRelativePath.substring(0,))
+                console.log(folder.value)
+                // folderUploadForm.submit();
             })
 
             // console.log(file.files.length)

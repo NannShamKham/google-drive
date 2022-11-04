@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreFolderUploadRequest;
-use App\Http\Requests\UpdateFolderUploadRequest;
-use App\Models\FolderUpload;
+use App\Http\Requests\StoreFolderRequest;
+use App\Http\Requests\UpdateFolderRequest;
+use App\Models\Folder;
 
-class FolderUploadController extends Controller
+class FolderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,21 +31,21 @@ class FolderUploadController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreFolderUploadRequest  $request
+     * @param  \App\Http\Requests\StoreFolderRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFolderUploadRequest $request)
+    public function store(StoreFolderRequest $request)
     {
-        return $request;
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\FolderUpload  $folderUpload
+     * @param  \App\Models\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function show(FolderUpload $folderUpload)
+    public function show(Folder $folder)
     {
         //
     }
@@ -53,10 +53,10 @@ class FolderUploadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\FolderUpload  $folderUpload
+     * @param  \App\Models\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function edit(FolderUpload $folderUpload)
+    public function edit(Folder $folder)
     {
         //
     }
@@ -64,11 +64,11 @@ class FolderUploadController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateFolderUploadRequest  $request
-     * @param  \App\Models\FolderUpload  $folderUpload
+     * @param  \App\Http\Requests\UpdateFolderRequest  $request
+     * @param  \App\Models\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFolderUploadRequest $request, FolderUpload $folderUpload)
+    public function update(UpdateFolderRequest $request, Folder $folder)
     {
         //
     }
@@ -76,10 +76,10 @@ class FolderUploadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\FolderUpload  $folderUpload
+     * @param  \App\Models\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FolderUpload $folderUpload)
+    public function destroy(Folder $folder)
     {
         //
     }
