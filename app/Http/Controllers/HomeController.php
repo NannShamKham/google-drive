@@ -25,6 +25,8 @@ class HomeController extends Controller
     public function index()
     {
         $files = FileUpload::all();
-        return view('home',compact('files'));
+        $extensions = ['docx','xlsx','pdf','csv','jpeg','png','svg'];
+//        $extensions = "hello";
+        return view('home',compact(['files','extensions']));
     }
 }
