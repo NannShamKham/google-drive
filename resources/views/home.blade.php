@@ -10,7 +10,7 @@
             <div class="col-lg-3">
                 <div class="mt-4">
                     <div class="card" style="height: 200px">
-                        @if($file->extension === 'jpeg' || $file->extension === 'png')
+                        @if($file->extension === 'jpeg' || $file->extension === 'png' || $file->extension === 'jpg')
                             <img src="{{\Illuminate\Support\Facades\Storage::url($file->StorageFileName)}}" class="card-img-top img-width" alt="...">
                             <div class="card-body d-flex align-items-center">
                                 <i class="bi bi-image text-danger fs-5 me-2"></i>
