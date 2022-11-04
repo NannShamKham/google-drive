@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('StorageFileName');
             $table->string('UiDbFileName');
+            $table->string('extension');
             $table->timestamps();
         });
     }

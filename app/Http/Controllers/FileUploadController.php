@@ -36,11 +36,15 @@ class FileUploadController extends Controller
      */
     public function store(StoreFileUploadRequest $request)
     {
-        $dbName = $request->photos->getClientOriginalName();;
+
+//        return $request->photos->getClientOriginalExtension();
+        $dbName = $request->photos->getClientOriginalName();
         $newName = "img_".uniqid().".".$request->file('photos')->extension();
+        $extensions = ['docx','xlsx','pdf','csv'];
         $FileUpload = new FileUpload();
         $FileUpload->StorageFileName = $newName;
         $FileUpload->UiDbFileName = $dbName;
+        $FileUpload->extension = $request->photos->getClientOriginalExtension();
 
         if($request->hasFile('photos')){
             $request->file('photos')->storeAs("public",$newName);
