@@ -50,7 +50,7 @@
                                 <input type="file" name="photos" id="file" hidden>
                             </div>
                         </form>
-                        <form action="{{route('folder-upload.store')}}" id="folderUploadForm" class="text-secondary fw-bold text-decoration-none pointer" method="post">
+                        <form action="{{route('folder.store')}}" id="folderUploadForm" class="text-secondary fw-bold text-decoration-none pointer" method="post">
                             @csrf
                             <div class="d-flex mb-3">
                                 <div class="">
@@ -199,12 +199,13 @@
 
             folder.click();
             folder.addEventListener('change',function (e){
-                console.log(e.target.files[0].webkitRelativePath.substring(0,))
-                console.log(folder.value)
-                // folderUploadForm.submit();
+                folderOriginal.value = e.target.files[0].webkitRelativePath.split('/')[0];
+                console.log(folderOriginal.value)
+
+                folderUploadForm.submit();
             })
 
-            // console.log(file.files.length)
+
         })
     </script>
 @endpush
