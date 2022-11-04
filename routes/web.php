@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StoreController;
-
+use App\Http\Controllers\FolderUploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +23,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/store',StoreController::class);
 
+Route::resource('/folder-upload',FolderUploadController::class);
+
+
 Route::resource('/file-upload',\App\Http\Controllers\FileUploadController::class);
+
